@@ -4,7 +4,7 @@ import axios from 'axios';
 function Fav() {
     const [mdat , setDat] = useState([]);
     const id = sessionStorage.getItem("id");
-    const url ="https://movieaddabknd.onrender.com";
+    const url ="https://mv-adda-api.vercel.app";
     
     useEffect(() => {
         async function getData() {

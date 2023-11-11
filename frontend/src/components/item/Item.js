@@ -3,7 +3,7 @@ import {Link, useNavigate} from "react-router-dom";
 import axios from "axios";
 import "./item.css";
 export default function Item(props){
-  const url ="https://movieaddabknd.onrender.com";
+  const url ="https://mv-adda-api.vercel.app";
   var det = props.detail+'';
   const navigate =useNavigate();
   const handleClick = ()=>{

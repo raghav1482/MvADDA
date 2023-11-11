@@ -6,7 +6,7 @@ import { authActions } from '../../store';
 import { useDispatch } from 'react-redux';
 
 export default function Login(){
-    const url = "https://movieaddabknd.onrender.com";
+    const url = "https://mv-adda-api.vercel.app";
     const dispatch = useDispatch();
     const navigate = useNavigate();
     const [Inputs , setInputs] = useState({email : "" , password:""});

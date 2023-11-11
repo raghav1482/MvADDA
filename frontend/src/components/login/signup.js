@@ -3,7 +3,7 @@ import "./signin_up.css";
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 export default function Signup(){
-    const url = "https://movieaddabknd.onrender.com";
+    const url = "https://mv-adda-api.vercel.app";
     const navigate = useNavigate();
     const [Inputs , setInputs] = useState({email:"" , password:""});
     const change =(e)=>{
