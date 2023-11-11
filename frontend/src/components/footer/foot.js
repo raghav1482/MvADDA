@@ -24,10 +24,8 @@ export default function Foot(){
 
           <div className="col-md-4 col-sm-6 col-xs-12 soc">
             <ul className="social-icons">
-              <li><a className="facebook" href="/"><i className="fa fa-facebook"></i></a></li>
-              <li><a className="twitter" href="/"><i className="fa fa-twitter"></i></a></li>
-              <li><a className="dribbble" href="/"><i className="fa fa-dribbble"></i></a></li>
-              <li><a className="linkedin" href="/"><i className="fa fa-linkedin"></i></a></li>   
+              <li><a className="github" href="https://github.com/raghav1482"><i className="fa fa-github"></i></a></li>
+              <li><a className="linkedin" href="https://www.linkedin.com/in/raghvendra-tiwari-bb7637224"><i className="fa fa-linkedin"></i></a></li>   
             </ul>
           </div>
         </div>

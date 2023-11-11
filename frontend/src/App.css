@@ -6,6 +6,14 @@ body{
   backdrop-filter: blur(2px);
   font-family: 'Sora', sans-serif;
 }
+.Toastify__close-button {
+  background-color: transparent !important;
+}
+
+.toast-message{
+  background-color: #1e1e1e !important;
+  color: rgba(255, 255, 255, 0.732) !important;
+}
 .App {
   text-align: center;
   overflow-x: hidden;

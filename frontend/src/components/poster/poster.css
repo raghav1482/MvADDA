@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Sora&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@300;500;600&display=swap');
 
 body{
 	box-shadow: inset 800px 0px 100px rgba(0, 0, 0, 0.697);
@@ -29,6 +30,7 @@ button{
 	color:aliceblue;
 	font-family: 'Sora', sans-serif;
 	margin-bottom: 40px;
+	font-weight: 600;
 }
 
 .post1 button{
@@ -41,8 +43,9 @@ button{
 .post img{
 	margin: 30px;
 	border-radius: 0px 10px;
-
+	
 }
+
 
 @media screen and (max-width:770px) {
 	.post{

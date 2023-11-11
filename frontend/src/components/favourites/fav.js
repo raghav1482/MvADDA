@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import Item from '../item/Item';
+import emptypng from "../images/empty.png" 
+import "./fav.css";
 import axios from 'axios';
+
 function Fav() {
     const [mdat , setDat] = useState([]);
     const id = sessionStorage.getItem("id");
@@ -19,8 +22,8 @@ function Fav() {
     }, [mdat]);
   return (<>
         <h1 style={{width:"max-content" , textAlign:"center" ,margin:"20px auto",padding:"10px 20px", backgroundColor:"white" , color:"red" , borderRadius:"10px"}}>Favourites</h1>
-    <div style={{display:"flex" , flexWrap:"wrap" , justifyContent:"center"}}>
-                  {mdat.map((dat)=>{
+    <div style={{display:"flex" , flexWrap:"wrap" , justifyContent:"center",marginBottom:"200px"}}>
+                  {mdat.length>0 ? mdat.map((dat)=>{
                 return <div style={{margin:"20px"}} key={dat.title}>    <Item
                 title={dat && dat.title ? dat.title : "Unknown"}
                 page={dat && dat.page ? dat.page : "#"}
@@ -28,7 +31,7 @@ function Fav() {
                 keys={dat && dat.keys ? dat.keys : ""}
                 detail={dat && dat.detail ? dat.detail : "" } fav={false} del={true}
               /></div>
-            })}
+            }):<><div className='empty'><img src={emptypng}/><h1>EMPTY:(</h1></div></>}
     </div>
     </>
 

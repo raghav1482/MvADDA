@@ -23,7 +23,7 @@ export default function Poster(props) {
         <>
             <div className="post">
                 <div className="post1">
-                    <h1>{newdat.name}</h1>
+                    <h1 className='glow'>{newdat.name}</h1>
                     <a href={newdat.url}>
                         <button className="button-62">DETAILS</button>
                     </a>
