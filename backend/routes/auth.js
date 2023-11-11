@@ -1,6 +1,7 @@
 const router = require("express").Router();
 
 const User = require("../models/user");
+const bcrypt = require("bcryptjs");
 
 router.post("/register",async(req,res)=>{
 try{
@@ -12,7 +13,7 @@ try{
     }
     else{
         const user = new User({email , password});
-        await user.save().then(()=>{res.status(200).json({message:"Signup Successfull"})});
+        await user.save().then(()=>{res.status(200).json({message:"Signup Successful"})});
     }
 }
 catch(e){
@@ -25,8 +26,8 @@ router.post("/login",async(req,res)=>{
     const {email , password} = req.body;
     const user  = await User.findOne({email:email});
     if(user){
-        if(password === user.password){
-            res.status(200).json({message:"Login Successfull",id:user.id  });
+        if(await bcrypt.compare(password , user.password)){
+            res.status(200).json({message:"Login Successful",id:user.id  });
         }
         else{
             res.status(200).json({message:"Wrong Credetials"});
