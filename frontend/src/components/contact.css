@@ -1,0 +1,13 @@
+.contact input,textarea{
+    outline: none;
+    background-color: rgb(30, 30, 30);
+    border: none;
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+}
+.container1{
+    background-color: rgba(18, 18, 18, 0.685);
+    padding: 30px;
+    border-radius: 30px;
+}

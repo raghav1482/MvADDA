@@ -1,0 +1,142 @@
+.wrapper{
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  width:100%;
+  max-width: 650px;
+  height:auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.card{
+  flex: 1;
+  flex-basis: 300px;
+  flex-grow: 0;
+  height: 440px;
+  background: #fff;
+  border: 2px solid #fff;
+  box-shadow: 0px 4px 7px rgba(0,0,0,.5);
+  cursor: pointer;
+  transition: all .3s cubic-bezier(.8,.5,.2,1.4);
+  overflow: hidden;
+  position: relative;
+}
+.card img{
+  width: 300px;
+  height:100%;
+  transition: all .3s cubic-bezier(.8,.5,.2,1.4);
+}
+.descriptions{
+  position: absolute;
+  top:0px;
+  left:0px;
+  background-color: rgba(255,255,255,.7);
+  width:100%;
+  height:100%;
+  transition: all .4s ease-in-out;
+  padding: 20px;
+  box-sizing: border-box;
+  clip-path: circle(0% at 100% 100%);
+}
+.card:hover .descriptions{
+  left:0px;
+  transition: all .4s ease-in-out;
+  clip-path: circle(75%);
+}
+.card:hover{
+  transition: all .3s cubic-bezier(.8,.5,.2,1.4);
+  box-shadow: 0px 2px 3px rgba(0,0,0,.3);
+  transform: scale(.97);
+}
+.card:hover img{
+  transition: all .3s cubic-bezier(.8,.5,.2,1.4);
+  transform: scale(1.6) rotate(20deg);
+  filter: blur(3px);
+}
+.card .mvtitle{
+  color: #ff3838;
+  letter-spacing: 1px;
+  margin: 0px;
+  background-color: transparent;
+  font-size: 25px;
+}
+.card p{
+  line-height: 24px;
+  height: 70%;
+}
+.titleoverlay{
+  position: absolute;
+  right: 0;
+  font-size: 24px;
+  bottom: -2%;
+  border-top-left-radius: 10px  !important;
+  border-bottom-right-radius: 0px  !important;
+  z-index: 1;
+  padding: 5px 10px !important;
+  margin-left: 0 !important;
+  overflow-wrap: break-word !important;
+  max-width: 100% !important;
+  background-color: white;
+  color: #ff3838;
+}
+.button-62 {
+  background: linear-gradient(to bottom right, #EF4765, #FF9A5A);
+  border: 0;
+  border-radius: 12px;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system,system-ui,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 2.5;
+  outline: transparent;
+  padding: 0 1rem;
+  text-align: center;
+  text-decoration: none;
+  transition: box-shadow .2s ease-in-out;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+}
+
+.button-62:not([disabled]):focus {
+  box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
+}
+
+.button-62:not([disabled]):hover {
+  box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
+}
+
+.fav-btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  border-radius: 50%;
+  border: none;
+  color: white;
+  font-size: 20px;
+  height: 40px;
+  width: 40px;
+  margin: 10px;
+  transition: all 0.1s;
+}
+.fav-btn:hover{
+  background-color: #ff625a !important;
+  scale: 1.1;
+}
+
+.fv-btns{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: max-content;
+  top:1%;
+  right: 0;
+}
