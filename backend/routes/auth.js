@@ -30,7 +30,7 @@ router.post("/login",async(req,res)=>{
             res.status(200).json({message:"Login Successful",id:user.id  });
         }
         else{
-            res.status(200).json({message:"Wrong Credetials"});
+            res.status(200).json({message:"Wrong Credentials"});
         }
     }
     else{

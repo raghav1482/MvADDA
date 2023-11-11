@@ -22,7 +22,7 @@ export default function Login(){
         try{
         await axios.post(`${url}/api/v1/login`,Inputs).then((response)=>{
             setLoading(false);
-            if(response.data.message === "Login Successfull"){
+            if(response.data.message === "Login Successful"){
                 alert(response.data.message);
                 setInputs({email : "" , password:""});
                 sessionStorage.setItem("id",response.data.id);
