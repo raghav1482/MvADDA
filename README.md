@@ -49,19 +49,19 @@ Welcome to Movie Adda - your go-to platform for exploring and managing your favo
    ```bash
    git clone [https://github.com/raghav1482/MvADDA.git]
    cd mvadda
-# Install server dependencies
+## Install server dependencies
 - cd backend
 - npm install
 
-# Install client dependencies
+## Install client dependencies
 - cd frontend
 - npm install
 
-# Run the server
+## Run the server
 - cd backend
 - node index
 
-# Run the client (in a new terminal window)
+## Run the client (in a new terminal window)
 - cd frontend
 - npm start
 
