@@ -28,7 +28,7 @@ export default function Signup(){
                 setLoading(false);
             }
         });
-    }catch(e){alert("ERROR :(")}
+    }catch(e){alert("ERROR :(");setLoading(false)}
     }
     return(<>
     <div className="form-wrapper">

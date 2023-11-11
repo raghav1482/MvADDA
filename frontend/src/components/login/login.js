@@ -33,7 +33,7 @@ export default function Login(){
                 alert(response.data.message);
             }
         });
-    }catch(e){alert("ERROR :(")}
+    }catch(e){alert("ERROR :(");setLoading(false)}
 
     }
     return(<>
