@@ -6,6 +6,7 @@ import { authActions } from '../../store';
 import { useDispatch } from 'react-redux';
 
 export default function Login(){
+    const [loading, setLoading] = useState(false);
     const url = "https://mv-adda-api.vercel.app";
     const dispatch = useDispatch();
     const navigate = useNavigate();
@@ -17,7 +18,10 @@ export default function Login(){
     }
     const submit =async(e)=>{
         e.preventDefault();
+        setLoading(true);
+        try{
         await axios.post(`${url}/api/v1/login`,Inputs).then((response)=>{
+            setLoading(false);
             if(response.data.message === "Login Successfull"){
                 alert(response.data.message);
                 setInputs({email : "" , password:""});
@@ -29,6 +33,7 @@ export default function Login(){
                 alert(response.data.message);
             }
         });
+    }catch(e){alert("ERROR :(")}
 
     }
     return(<>
@@ -43,7 +48,9 @@ export default function Login(){
                 <input type="password" required name="password" value={Inputs.password} onChange={change}/>
                 <label>Password</label>
             </div>
-            <button type="submit" onClick={submit}>Login</button>
+            <button type="submit" onClick={submit}>{loading?<div class="spinner-border mx-auto" role="status">
+  <span class="sr-only">Loading...</span>
+</div>:'Login'}</button>
         </form>
         <p>Not registered yet? <Link to="/signup">Sign UP</Link></p>
     </div>

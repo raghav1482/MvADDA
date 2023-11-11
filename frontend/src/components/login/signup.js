@@ -4,6 +4,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 export default function Signup(){
     const url = "https://mv-adda-api.vercel.app";
+    const [loading, setLoading] = useState(false);
     const navigate = useNavigate();
     const [Inputs , setInputs] = useState({email:"" , password:""});
     const change =(e)=>{
@@ -13,16 +14,21 @@ export default function Signup(){
 
     const submit = async(e)=>{
         e.preventDefault();
+        setLoading(true);
+        try{
         await axios.post(`${url}/api/v1/register`,Inputs).then((response)=>{
             if(response.data.message==="User already exist"){
                 alert(response.data.message);
+                setLoading(false);
             }
             else{
                 alert(response.data.message);
                 setInputs({email:"" , password:""});
                 navigate("/signin");
+                setLoading(false);
             }
         });
+    }catch(e){alert("ERROR :(")}
     }
     return(<>
     <div className="form-wrapper">
@@ -34,7 +40,9 @@ export default function Signup(){
             <div className="form-control">
                 <input type="password" required name="password" placeholder='password' value={Inputs.password} onChange={change}/>
             </div>
-            <button type="submit" onClick={submit}>Register</button>
+            <button type="submit" onClick={submit}>{loading?<div class="spinner-border mx-auto" role="status">
+  <span class="sr-only">Loading...</span>
+</div>:'Register'}</button>
         </form>
         <p>Already registered ? <Link to="/signin">Sign in</Link></p>
     </div>

@@ -17,6 +17,7 @@ import Home from './components/Home';
 import Result from './components/Result';
 import Signup from './components/login/signup';
 import Login from './components/login/login';
+import NotFound from './error';
 
 function App() {
   const dispatch = useDispatch();
@@ -40,6 +41,7 @@ function App() {
           <Route path={`/signup`} element={<Signup/>}></Route>
           <Route path={`/signin`} element={<Login/>}></Route>
           <Route path={`/favourites`} element={<Fav/>}></Route>
+          <Route path={`*`}element={<NotFound/>} />
         </Routes>
       <Foot />
       </Router>

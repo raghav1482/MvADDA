@@ -10,23 +10,28 @@ export default function Item(props){
     navigate("/Moviedesc" , {state:{image:props.imag , title : props.title , detail : props.detail , page:props.page}});
   }
   const addfav = async(data) =>{
-    const id = sessionStorage.getItem("id");
-    if(id){
-    axios.post(`${url}/api/v1/addfav`,{id,favourite:data}).then((response)=>{
-      alert(response.data.message);
-    })
-  }
-  else{
-    alert("Please Sign in");
-  }
+      const id = sessionStorage.getItem("id");
+      if(id){
+        try{
+          axios.post(`${url}/api/v1/addfav`,{id,favourite:data}).then((response)=>{
+            alert(response.data.message);
+          })
+        }catch(e){alert("ERROR :(")}
+      }
+      else{
+        alert("Please Sign in");
+      }
   }
 
   const delfav = async(title)=>{
     const id = sessionStorage.getItem("id");
     if(id){
-      axios.delete(`${url}/api/v1/delfav/${id}?title=${title}`).then((response)=>{
-        alert(response.data.message);
-      })
+      try{
+        axios.delete(`${url}/api/v1/delfav/${id}?title=${title}`).then((response)=>{
+          alert(response.data.message);
+        })
+      }
+      catch(e){alert("ERROR :(")}
     }
   }
 

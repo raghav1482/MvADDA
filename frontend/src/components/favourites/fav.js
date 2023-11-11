@@ -12,7 +12,7 @@ function Fav() {
                 const response = await axios.get(`${url}/api/v1/getfavs/${id}`);
                     setDat(response.data.favorites.reverse()); 
             } catch (error) {
-                console.error('Error fetching data:', error);
+              alert("ERROR fetching data :(");
             }
         }
         getData();
