@@ -5,9 +5,34 @@
     padding: 20px;
     border-radius: 10px;
     color: white;
+    width: 400px !important;
 }
 .container1{
     background-color: rgba(18, 18, 18, 0.685);
     padding: 30px;
+    margin-top: 10% !important;
     border-radius: 30px;
 }
+
+  .container1 form{
+    display: flex;
+    flex-direction: column;
+  }
+  .container1 label{
+    display: inline-block ;
+  }
+  .container1 input {
+    display: inline-block;
+    margin:auto;
+  }
+  .container1 .button-62{
+    width: 100px !important;
+  }
+
+  @media only screen and (max-width:700px) {
+
+    .container1{
+        width: 90% !important;
+    }
+    
+  }

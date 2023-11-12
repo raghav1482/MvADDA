@@ -16,7 +16,7 @@ export default function Contact(){
     <div style={{display:"flex" , margin:"auto" , justifyContent:"space-between" , width:"100%"}}><br/>
     <textarea id="message" name="message" for="message" placeholder="Write something.." style={{height:"100px" , width:"40%" , margin:"auto"}}></textarea><br/></div>
 
-    <input type="submit" className="button-62" style={{width:"max-content" , marginTop:"30px"}} value="Submit"/>
+    <input type="submit" className="button-62" style={{marginTop:"30px"}} value="Submit"/>
   </form>
 </div>
     </>);

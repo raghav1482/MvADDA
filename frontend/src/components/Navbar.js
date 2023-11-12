@@ -18,11 +18,11 @@ export default function Navb(){
     return(
         <>
 <Navbar collapseOnSelect expand="lg"  variant="dark">
-      <Container>
+      <Container className="nav-css">
         <Navbar.Brand href="/"><span style={{color:"white"}}><b>MovieADDA</b></span></Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="me-auto">
+          <Nav className="me-auto nav-null">
             {/* <Nav.Link href="/">Home</Nav.Link> */}
             {/* <Nav.Link href="/movies">Movies</Nav.Link> */}
           </Nav>

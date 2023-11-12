@@ -20,7 +20,7 @@ button{
 	padding-top: 80px !important;
 	display: flex;
 	justify-content: space-between;
-	margin-top: -60px;
+	margin-top: -100px;
 }
 .post1{
 	padding: 100px 0 100px 8vw;
@@ -77,3 +77,10 @@ button{
 		opacity: 0.5;
 	}
 }
+
+
+@media screen and (max-width : 992px) {
+	.post{
+		margin-top: 80px;
+	}
+  }
