@@ -6,7 +6,7 @@ const app = express();
 app.use(express.json())
 app.use(cors(
     {
-        origin:["https://movieadda-tan.vercel.app","http://localhost:3000"],
+        origin:["https://movieadda-tan.vercel.app","https://quadmovie.netlify.app","http://localhost:3000"],
         methods:["POST","GET","DELETE"],
         credentials:true
     }
